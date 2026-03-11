@@ -6,9 +6,9 @@ High Address (e.g. 0xFFFFFFFF)
 |   & Environment Variables |
 +---------------------------+
 |                           |
-|         STACK             |  ← grows DOWNWARD ↓ (local variables)
-|   - Local variables       |
-|   - Function parameters   |
+|         STACK             |  ← grows DOWNWARD ↓ (local variables) , usually stack size in between 1-8 MB
+|   - Local variables       |    Stack variables works at very fast and uses at compile time.
+|   - Function parameters   |    and Limited to function scope.
 |   - Return addresses      |
 |   - Stack frames          |
 |   - Prev frame pointer    |  
@@ -19,9 +19,9 @@ High Address (e.g. 0xFFFFFFFF)
 |       toward each other   |
 +---------------------------+
 |                           |
-|          HEAP             |  ← grows UPWARD ↑ (Heap variables)
-|   - malloc() / calloc()   |
-|   - realloc() / free()    |
+|          HEAP             |  ← grows UPWARD ↑ (Heap variables ) large size and limited by RAM
+|   - malloc() / calloc()   |    Heap variables works slower than stack but lives until explicityly freed 
+|   - realloc() / free()    |    and uses at runtime. 
 |   - Dynamic memory        |
 |                           |
 +---------------------------+
