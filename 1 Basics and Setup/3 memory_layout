@@ -1,0 +1,41 @@
+C - Complete Memory Layout
+
+High Address (e.g. 0xFFFFFFFF)
++---------------------------+
+|   Command Line Args       |  ← argv[], argc, environment variables
+|   & Environment Variables |
++---------------------------+
+|                           |
+|         STACK             |  ← grows DOWNWARD ↓ (local variables)
+|   - Local variables       |
+|   - Function parameters   |
+|   - Return addresses      |
+|   - Stack frames          |
+|   - Prev frame pointer    |  
+|                           |
++---------------------------+
+|       (free space)        |
+|     Stack & Heap grow     |
+|       toward each other   |
++---------------------------+
+|                           |
+|          HEAP             |  ← grows UPWARD ↑ (Heap variables)
+|   - malloc() / calloc()   |
+|   - realloc() / free()    |
+|   - Dynamic memory        |
+|                           |
++---------------------------+
+|          BSS              |  ← Uninitialized globals & statics (BSS - Block started by symbol)
+|   int x;                  |     (OS zeroes these out)
+|   static int y;           |
++---------------------------+
+|       DATA SEGMENT        |  ← Initialized globals & statics
+|   int x = 10;             |
+|   static int y = 5;       |
++---------------------------+
+|       TEXT SEGMENT        |  ← Our actual compiled code
+|   (CODE SEGMENT)          |     Read-only instructions
+|   - main()                |
+|   - all functions         |
++---------------------------+
+Low Address (e.g. 0x00000000)
