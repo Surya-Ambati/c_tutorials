@@ -91,6 +91,8 @@ Example:
 
 %zu ==> % -start, z - modifer, u - format specifier    
 ==============================================================================
+
+for reference or address of variable , need to use format specifer - %p
 */
 
 #include<stdio.h>
