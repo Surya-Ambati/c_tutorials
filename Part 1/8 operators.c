@@ -15,7 +15,7 @@ int main(){
     printf("value of d %d\n", vard);
     printf("value of b %d\n", varb);
 
-    printf("result of a and b comparison: %s\n", ((varb>vara) && (varb<varc))?"yes":"no");
+    printf("result of a and b comparison: %s\n", ((varb>vara) && (varb<varc))?"yes":"no"); //ternaroy operator
     int spl_cast = (int) 4.5;
     printf("special cast result : %d\n", spl_cast);
 
