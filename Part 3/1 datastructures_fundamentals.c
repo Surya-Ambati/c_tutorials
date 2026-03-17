@@ -30,6 +30,12 @@ it store using 2D array.
 
 Ex2: Browser history uses Stack structure. 
 
+Advantages of Data Structures: 
+1️⃣ Efficiency: Good data structure = faster + less memory
+2️⃣ Reusability: Same data structure can be reused in many programs.
+3️⃣ Abstraction: User doesn’t need to know internal details.
+
+
 4) Why Companies Care About Data Structures
 
 Data structures help in:
@@ -89,6 +95,21 @@ Data Structure → Implementation
 
 Full Flow (Big Picture)
 Data → Organized using Data Structure → Implements ADT → Used by Program
+
+9) Which Data Structure to Use?
+You can implement same ADT in multiple ways.
+
+Example:
+Stack → Array OR Linked List
+
+So which one is better?
+Answer: Depends on requirements
+
+| Requirement                     | Best Choice |
+| ------------------------------- | ----------- |
+| Need speed                      | Array       |
+| Need flexibility (dynamic size) | Linked List |
+
 -------------------------------------------------------------------------------------------
 
 
