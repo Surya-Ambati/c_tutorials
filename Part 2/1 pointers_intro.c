@@ -20,7 +20,7 @@ int main(){
   printf("value inside reference-abc - dereference %d\n", *pi);
   printf("address of pi - %p\n", &pi);
 
-//value update
+//value update with dereference
     *pi = 25;
     printf("updated value of abc - %d\n", abc);
 
