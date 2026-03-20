@@ -59,7 +59,9 @@ Binary:    0  0   1  0  1  1  1  1
 Position:  7  6   5  4  3  2  1  0
 Value:    128 64 32 16  8  4  2  1
 
-total = 1+2+4+8+32 = 47
+first byte total = 1+2+4+8+32 = 47
+second byte total = 1 = 1
+third and fourth byte total = 0
 
 Note: computre stores numbers as binary, characters as ASCII.
 ASCII = a mapping (encoding) between characters and numbers
