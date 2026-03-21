@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 //pointer arthimatic - allows only + , - (addition and subtration)
+// type casting, void pointers
 
 int main(){
 
