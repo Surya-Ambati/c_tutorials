@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//array stores in memory contiguously- meaning stores in memory address without gaps.
+
 int main(){
 
     int abc_array[5]= {10,20,30,40,50};
