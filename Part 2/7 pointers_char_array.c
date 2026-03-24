@@ -29,6 +29,22 @@ int main(){
      sumofelements(inarr);
 
 
+
+
+
+    char name[] = "Surya";
+    printf("%s\n", name);
+    
+
+
+    char name[20];
+    fgets(name, sizeof(name), stdin);
+    printf("%s", name);
+    return 0;
+
+
+
+
 }
 
     // int a = 10;
