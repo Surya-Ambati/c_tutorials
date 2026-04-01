@@ -14,10 +14,11 @@
 
 int main(){
 
-//  doesnt work in runtime   
+//  doesnt work in runtime for stack memory  
 // int n;
 // scanf("%d", &n);
 // int arr[n];
+//  (int*)malloc(n * sizeof(int));
 
 
 int *ph;
