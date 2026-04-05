@@ -7,16 +7,26 @@ return_type function_name(parameters) {
 }
     */
 
+int varibale_name = 12;    
 
-int add(int a, int b) {
-    return a + b;
+int add_variables(int a, int b){
+    
+    printf("added values - %d\n", a+b);
+    return a+b;
 }
 
+
 // int main() {
-//     int result = add(5, 3);
-//     printf("Sum = %d", result);
-//     return 0;
+
+// int a = 10;
+// int b = 20;
+// int output = add_variables(a,b);
+// printf("output value - %d\n", output);
+
+
 // }
+
+
 
 // two type of functions
 
@@ -27,7 +37,6 @@ int add(int a, int b) {
 // A copy of the variable is passed to the function, 
 // Changes inside function DO NOT affect original variable
 
-#include <stdio.h>
 
 void modify(int x) {
     x = x + 10;
@@ -37,22 +46,23 @@ void modify(int x) {
 // int main() {
 //     int a = 5;
 //     modify(a);
-//     printf("Outside function: %d\n", a);
+//     printf("modify function: %d\n", a);
 //     return 0;
 // }
 
+
+
 // Pass by Address (Using Pointers)
 // Address of variable is passed, Changes DO affect original variable
-#include <stdio.h>
 
-void modify(int *x) {
-    *x = *x + 10;
-    printf("Inside function: %d\n", *x);
+void ref_modify(int *x){
+    *x = *x +10;
+    printf("modify inside func: %d\n", *x);
 }
 
 int main() {
     int a = 5;
-    modify(&a);
+    ref_modify(&a);
     printf("Outside function: %d\n", a);
     return 0;
 }
