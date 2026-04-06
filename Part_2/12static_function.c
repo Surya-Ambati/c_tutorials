@@ -8,4 +8,8 @@ int main(){
     int y = 25;
     int z = add_variables(x,y);
     printf("output of x and y addition - %d\n", z);
+
+    // int output = s_add_variables(x,y);
+    // printf("out of x and y variable output- %d\n", output);
+
 }
