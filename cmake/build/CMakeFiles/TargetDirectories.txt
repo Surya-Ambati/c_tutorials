@@ -1,0 +1,4 @@
+/workspaces/c_tutorials/cmake/build/CMakeFiles/math_lib.dir
+/workspaces/c_tutorials/cmake/build/CMakeFiles/mainapp.dir
+/workspaces/c_tutorials/cmake/build/CMakeFiles/edit_cache.dir
+/workspaces/c_tutorials/cmake/build/CMakeFiles/rebuild_cache.dir
