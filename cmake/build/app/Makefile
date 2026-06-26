@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles /workspaces/c_tutorials/cmake/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /workspaces/c_tutorials/cmake/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles /workspaces/c_tutorials/cmake/build/app//CMakeFiles/progress.marks
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspaces/c_tutorials/cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named math_lib
+# Convenience name for target.
+app/CMakeFiles/mainapp.dir/rule:
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/mainapp.dir/rule
+.PHONY : app/CMakeFiles/mainapp.dir/rule
 
-# Build rule for target.
-math_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 math_lib
-.PHONY : math_lib
-
-# fast build rule for target.
-math_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/build
-.PHONY : math_lib/fast
-
-#=============================================================================
-# Target rules for targets named mainapp
-
-# Build rule for target.
-mainapp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mainapp
+# Convenience name for target.
+mainapp: app/CMakeFiles/mainapp.dir/rule
 .PHONY : mainapp
 
 # fast build rule for target.
 mainapp/fast:
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/build
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/build
 .PHONY : mainapp/fast
+
+main.o: main.c.o
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	cd /workspaces/c_tutorials/cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -151,7 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mainapp"
-	@echo "... math_lib"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -163,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspaces/c_tutorials/cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

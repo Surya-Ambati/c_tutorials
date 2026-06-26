@@ -1,0 +1,7 @@
+# commands:
+
+# cmake .. , cmake --build .
+# cmake -S . -B build
+# cmake --build build
+
+# rm -rf build
