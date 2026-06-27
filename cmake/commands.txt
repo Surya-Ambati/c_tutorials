@@ -4,4 +4,12 @@
 # cmake -S . -B build
 # cmake --build build
 
+remove build folder (-rf means r-recursive and f-force):
 # rm -rf build
+
+change generator:
+cmake -G "Visual Studio 16 2019" 
+
+passing options (-D = Define) - (note - dont give space between -define variable):
+cmake -DCOMPILE_EXECUTABLE=ON
+cmake -S . -B build -DCOMPILE_EXECUTABLE=ON

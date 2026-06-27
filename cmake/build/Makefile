@@ -129,19 +129,6 @@ math_lib/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/build
 .PHONY : math_lib/fast
 
-#=============================================================================
-# Target rules for targets named mainapp
-
-# Build rule for target.
-mainapp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mainapp
-.PHONY : mainapp
-
-# fast build rule for target.
-mainapp/fast:
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/build
-.PHONY : mainapp/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -150,7 +137,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... mainapp"
 	@echo "... math_lib"
 .PHONY : help
 

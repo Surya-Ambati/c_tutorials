@@ -64,33 +64,15 @@ CMAKE_BINARY_DIR = /workspaces/c_tutorials/cmake/build
 
 # The main recursive "all" target.
 all: src/all
-all: app/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
-preinstall: app/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: src/clean
-clean: app/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory app
-
-# Recursive "all" directory target.
-app/all: app/CMakeFiles/mainapp.dir/all
-.PHONY : app/all
-
-# Recursive "preinstall" directory target.
-app/preinstall:
-.PHONY : app/preinstall
-
-# Recursive "clean" directory target.
-app/clean: app/CMakeFiles/mainapp.dir/clean
-.PHONY : app/clean
 
 #=============================================================================
 # Directory level rules for directory src
@@ -114,7 +96,7 @@ src/clean: src/CMakeFiles/math_lib.dir/clean
 src/CMakeFiles/math_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=3,4 "Built target math_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=1,2 "Built target math_lib"
 .PHONY : src/CMakeFiles/math_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,32 +114,6 @@ math_lib: src/CMakeFiles/math_lib.dir/rule
 src/CMakeFiles/math_lib.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/clean
 .PHONY : src/CMakeFiles/math_lib.dir/clean
-
-#=============================================================================
-# Target rules for target app/CMakeFiles/mainapp.dir
-
-# All Build rule for target.
-app/CMakeFiles/mainapp.dir/all: src/CMakeFiles/math_lib.dir/all
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/depend
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=1,2 "Built target mainapp"
-.PHONY : app/CMakeFiles/mainapp.dir/all
-
-# Build rule for subdir invocation for target.
-app/CMakeFiles/mainapp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/mainapp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 0
-.PHONY : app/CMakeFiles/mainapp.dir/rule
-
-# Convenience name for target.
-mainapp: app/CMakeFiles/mainapp.dir/rule
-.PHONY : mainapp
-
-# clean rule for target.
-app/CMakeFiles/mainapp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/clean
-.PHONY : app/CMakeFiles/mainapp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

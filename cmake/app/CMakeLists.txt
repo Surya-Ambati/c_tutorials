@@ -1,5 +1,5 @@
 
 
-add_executable(mainapp main.c)
+add_executable(${EXECUTABLE_NAME} main.c)
 
-target_link_libraries(mainapp math_lib)
+target_link_libraries(${EXECUTABLE_NAME} math_lib)

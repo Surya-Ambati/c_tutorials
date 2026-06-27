@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/workspaces/c_tutorials/cmake/include
 
-C_FLAGS = 
+C_FLAGS = -std=c17
 
