@@ -7,6 +7,8 @@ project(
     LANGUAGES C CXX
 )
 
+# version - 1.0.0 - major, minor, patch 
+
 set(LIBRARY_NAME "math_lib")
 set(EXECUTABLE_NAME "mainapp")
 
@@ -19,7 +21,7 @@ set(CMAKE_C_EXTENSIONS OFF)
 # set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(CMAKE_CXX_EXTENSIONS OFF)
 
-option(COMPILE_EXECUTABLE "whether to compile the main app" OFF)
+option(COMPILE_EXECUTABLE "whether to compile the main app" ON)
 
 message(STATUS "===========================")
 message(STATUS "Checking Cmake built in variables:")
@@ -27,6 +29,7 @@ message(STATUS "value of source dir: ${CMAKE_CURRENT_SOURCE_DIR}")
 message(STATUS "value of project dir:  ${PROJECT_SOURCE_DIR}")
 message(STATUS "===========================")
 
+add_subdirectory(config)
 add_subdirectory(src)
 
 if(COMPILE_EXECUTABLE)
@@ -35,5 +38,6 @@ else()
     message(STATUS "CMAKE is not compiling app directory, its only compiling library!!!")
 endif()
 
+target_include_directories(${LIBRARY_NAME} PUBLIC ${CMAKE_BINARY_DIR}/config/include)
 
 

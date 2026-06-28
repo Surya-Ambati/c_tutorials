@@ -26,9 +26,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake"
   "/workspaces/c_tutorials/cmake/CMakeLists.txt"
+  "/workspaces/c_tutorials/cmake/app/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "/workspaces/c_tutorials/cmake/config/CMakeLists.txt"
+  "/workspaces/c_tutorials/cmake/config/config.h.in"
   "/workspaces/c_tutorials/cmake/src/CMakeLists.txt"
   )
 
@@ -41,10 +44,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "config/include/config.h"
+  "config/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "app/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/math_lib.dir/DependInfo.cmake"
+  "app/CMakeFiles/mainapp.dir/DependInfo.cmake"
   )

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/workspaces/c_tutorials/cmake/include
+C_INCLUDES = -I/workspaces/c_tutorials/cmake/include -I/workspaces/c_tutorials/cmake/build/config/include
 
 C_FLAGS = -std=c17
 

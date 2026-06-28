@@ -23,4 +23,5 @@ app/CMakeFiles/mainapp.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /workspaces/c_tutorials/cmake/include/math_lib.h
+ /workspaces/c_tutorials/cmake/include/math_lib.h \
+ /workspaces/c_tutorials/cmake/build/config/include/config.h

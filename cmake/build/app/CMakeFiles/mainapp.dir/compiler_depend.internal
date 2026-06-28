@@ -28,5 +28,6 @@ app/CMakeFiles/mainapp.dir/main.c.o
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+ /workspaces/c_tutorials/cmake/build/config/include/config.h
  /workspaces/c_tutorials/cmake/include/math_lib.h
 

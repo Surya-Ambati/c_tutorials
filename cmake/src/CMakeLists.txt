@@ -8,5 +8,4 @@ add_library(${LIBRARY_NAME} STATIC math_lib.c)
 
 #  alternative bulitin load_command
 target_include_directories(${LIBRARY_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
-
-#pas
+#  private - , interface - , public - both private + interface

@@ -13,3 +13,8 @@ cmake -G "Visual Studio 16 2019"
 passing options (-D = Define) - (note - dont give space between -define variable):
 cmake -DCOMPILE_EXECUTABLE=ON
 cmake -S . -B build -DCOMPILE_EXECUTABLE=ON
+
+
+#Inbulit variables:
+${CMAKE_CURRENT_BINARY_DIR} - build/app folder
+${CMAKE_BINARY_DIR} - only build folder

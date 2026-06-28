@@ -27,6 +27,7 @@ app/CMakeFiles/mainapp.dir/main.c.o: /workspaces/c_tutorials/cmake/app/main.c \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  config/include/config.h \
   /workspaces/c_tutorials/cmake/include/math_lib.h
 
 
@@ -55,6 +56,8 @@ app/CMakeFiles/mainapp.dir/main.c.o: /workspaces/c_tutorials/cmake/app/main.c \
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/features.h:
+
+config/include/config.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
