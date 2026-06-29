@@ -1,20 +1,253 @@
-# commands:
+CMake Commands Cheat Sheet
 
-# cmake .. , cmake --build .
-# cmake -S . -B build
-# cmake --build build
+1. cmake ..
 
-remove build folder (-rf means r-recursive and f-force):
-# rm -rf build
+Definition:
+Configures the project by reading the CMakeLists.txt file from the parent directory and generates build files in the current directory.
 
-change generator:
-cmake -G "Visual Studio 16 2019" 
+Example:
+mkdir build
+cd build
+cmake ..
 
-passing options (-D = Define) - (note - dont give space between -define variable):
+------------------------------------------------------------
+
+2. cmake --build .
+
+Definition:
+Builds (compiles) the project using the generated build files in the current directory.
+
+Example:
+cmake --build .
+
+------------------------------------------------------------
+
+3. cmake -S . -B build
+
+Definition:
+Configures the project by taking the source from the current directory (-S) and generating build files inside the build directory (-B).
+
+Example:
+cmake -S . -B build
+
+------------------------------------------------------------
+
+4. cmake --build build
+
+Definition:
+Builds the project using the build files stored inside the build directory.
+
+Example:
+cmake --build build
+
+------------------------------------------------------------
+
+5. rm -rf build
+
+Definition:
+Deletes the entire build directory recursively and forcefully.
+
+r = Recursive (delete folders and contents)
+f = Force (no confirmation)
+
+Example:
+rm -rf build
+
+------------------------------------------------------------
+
+6. cmake -G "Visual Studio 16 2019"
+
+Definition:
+Selects the build system (Generator) used by CMake.
+
+Example:
+cmake -G "Visual Studio 16 2019" -S . -B build
+
+Other Generators:
+cmake -G "Ninja"
+cmake -G "Unix Makefiles"
+cmake -G "Visual Studio 17 2022"
+
+------------------------------------------------------------
+
+7. -D (Define Variable)
+
+Definition:
+Passes variables from the command line to CMake.
+
+Syntax:
+-DVARIABLE_NAME=VALUE
+
+Example:
 cmake -DCOMPILE_EXECUTABLE=ON
+
+or
+
 cmake -S . -B build -DCOMPILE_EXECUTABLE=ON
 
+Note:
+Do not leave a space after -D.
 
-#Inbulit variables:
-${CMAKE_CURRENT_BINARY_DIR} - build/app folder
-${CMAKE_BINARY_DIR} - only build folder
+Correct:
+-DCOMPILE_EXECUTABLE=ON
+
+Wrong:
+-D COMPILE_EXECUTABLE=ON
+
+============================================================
+Built-in Variables
+============================================================
+
+${CMAKE_CURRENT_BINARY_DIR}
+
+Definition:
+Returns the current build directory corresponding to the current CMakeLists.txt file.
+
+Project Structure:
+
+Project/
+│
+├── CMakeLists.txt
+├── app/
+│   └── CMakeLists.txt
+└── build/
+
+Inside app/CMakeLists.txt
+
+message(${CMAKE_CURRENT_BINARY_DIR})
+
+Output:
+build/app
+
+------------------------------------------------------------
+
+${CMAKE_BINARY_DIR}
+
+Definition:
+Returns the top-level build directory.
+
+Example:
+
+message(${CMAKE_BINARY_DIR})
+
+Output:
+build
+
+============================================================
+Common Target Commands
+============================================================
+
+target_include_directories()
+
+Definition:
+Adds header file directories that the target should search during compilation.
+
+Syntax:
+
+target_include_directories(MyApp
+    PRIVATE include
+)
+
+Example:
+
+target_include_directories(MyApp
+    PRIVATE include
+)
+
+Equivalent Compiler Option:
+
+-Iinclude
+
+------------------------------------------------------------
+
+target_link_libraries()
+
+Definition:
+Links one or more libraries to the target executable or library.
+
+Syntax:
+
+target_link_libraries(MyApp
+    PRIVATE MyLibrary
+)
+
+Example:
+
+target_link_libraries(MyApp
+    PRIVATE MyLibrary
+)
+
+Equivalent Compiler Option:
+
+-lMyLibrary
+
+------------------------------------------------------------
+
+target_compile_options()
+
+Definition:
+Adds compiler flags only for the specified target.
+
+Syntax:
+
+target_compile_options(MyApp
+    PRIVATE -Wall -Wextra
+)
+
+Example 1:
+
+target_compile_options(MyApp
+    PRIVATE -Wall -Wextra
+)
+
+Example 2:
+
+target_compile_options(MyApp
+    PRIVATE -O3
+)
+
+Equivalent Compiler Options:
+
+-Wall
+-Wextra
+-O3
+
+============================================================
+Quick Command Summary
+============================================================
+
+cmake ..
+Configure project from parent directory.
+
+cmake --build .
+Build project in the current build directory.
+
+cmake -S . -B build
+Configure project using a separate build directory.
+
+cmake --build build
+Build project from the build directory.
+
+rm -rf build
+Delete the build directory.
+
+cmake -G "Generator"
+Select the build system generator.
+
+-DVAR=VALUE
+Pass variables to CMake.
+
+${CMAKE_CURRENT_BINARY_DIR}
+Current build directory.
+
+${CMAKE_BINARY_DIR}
+Top-level build directory.
+
+target_include_directories()
+Add header include paths.
+
+target_link_libraries()
+Link libraries.
+
+target_compile_options()
+Add compiler options for a specific target.
