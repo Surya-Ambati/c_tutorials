@@ -32,7 +32,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/workspaces/c_tutorials/cmake/config/CMakeLists.txt"
   "/workspaces/c_tutorials/cmake/config/config.h.in"
-  "/workspaces/c_tutorials/cmake/src/CMakeLists.txt"
+  "/workspaces/c_tutorials/cmake/src/math_lib/CMakeLists.txt"
+  "/workspaces/c_tutorials/cmake/src/util_lib/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -46,12 +47,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "config/include/config.h"
   "config/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/math_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/util_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/math_lib.dir/DependInfo.cmake"
+  "src/math_lib/CMakeFiles/math_lib.dir/DependInfo.cmake"
+  "src/util_lib/CMakeFiles/util_lib.dir/DependInfo.cmake"
   "app/CMakeFiles/mainapp.dir/DependInfo.cmake"
   )

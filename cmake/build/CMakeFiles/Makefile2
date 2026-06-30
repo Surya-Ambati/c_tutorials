@@ -64,19 +64,22 @@ CMAKE_BINARY_DIR = /workspaces/c_tutorials/cmake/build
 
 # The main recursive "all" target.
 all: config/all
-all: src/all
+all: src/math_lib/all
+all: src/util_lib/all
 all: app/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: config/preinstall
-preinstall: src/preinstall
+preinstall: src/math_lib/preinstall
+preinstall: src/util_lib/preinstall
 preinstall: app/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: config/clean
-clean: src/clean
+clean: src/math_lib/clean
+clean: src/util_lib/clean
 clean: app/clean
 .PHONY : clean
 
@@ -111,51 +114,93 @@ config/clean:
 .PHONY : config/clean
 
 #=============================================================================
-# Directory level rules for directory src
+# Directory level rules for directory src/math_lib
 
 # Recursive "all" directory target.
-src/all: src/CMakeFiles/math_lib.dir/all
-.PHONY : src/all
+src/math_lib/all: src/math_lib/CMakeFiles/math_lib.dir/all
+.PHONY : src/math_lib/all
 
 # Recursive "preinstall" directory target.
-src/preinstall:
-.PHONY : src/preinstall
+src/math_lib/preinstall:
+.PHONY : src/math_lib/preinstall
 
 # Recursive "clean" directory target.
-src/clean: src/CMakeFiles/math_lib.dir/clean
-.PHONY : src/clean
+src/math_lib/clean: src/math_lib/CMakeFiles/math_lib.dir/clean
+.PHONY : src/math_lib/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/math_lib.dir
+# Directory level rules for directory src/util_lib
+
+# Recursive "all" directory target.
+src/util_lib/all: src/util_lib/CMakeFiles/util_lib.dir/all
+.PHONY : src/util_lib/all
+
+# Recursive "preinstall" directory target.
+src/util_lib/preinstall:
+.PHONY : src/util_lib/preinstall
+
+# Recursive "clean" directory target.
+src/util_lib/clean: src/util_lib/CMakeFiles/util_lib.dir/clean
+.PHONY : src/util_lib/clean
+
+#=============================================================================
+# Target rules for target src/math_lib/CMakeFiles/math_lib.dir
 
 # All Build rule for target.
-src/CMakeFiles/math_lib.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/build
+src/math_lib/CMakeFiles/math_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/math_lib/CMakeFiles/math_lib.dir/build.make src/math_lib/CMakeFiles/math_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/math_lib/CMakeFiles/math_lib.dir/build.make src/math_lib/CMakeFiles/math_lib.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=3,4 "Built target math_lib"
-.PHONY : src/CMakeFiles/math_lib.dir/all
+.PHONY : src/math_lib/CMakeFiles/math_lib.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/math_lib.dir/rule: cmake_check_build_system
+src/math_lib/CMakeFiles/math_lib.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/math_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/math_lib/CMakeFiles/math_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/math_lib.dir/rule
+.PHONY : src/math_lib/CMakeFiles/math_lib.dir/rule
 
 # Convenience name for target.
-math_lib: src/CMakeFiles/math_lib.dir/rule
+math_lib: src/math_lib/CMakeFiles/math_lib.dir/rule
 .PHONY : math_lib
 
 # clean rule for target.
-src/CMakeFiles/math_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/math_lib.dir/build.make src/CMakeFiles/math_lib.dir/clean
-.PHONY : src/CMakeFiles/math_lib.dir/clean
+src/math_lib/CMakeFiles/math_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/math_lib/CMakeFiles/math_lib.dir/build.make src/math_lib/CMakeFiles/math_lib.dir/clean
+.PHONY : src/math_lib/CMakeFiles/math_lib.dir/clean
+
+#=============================================================================
+# Target rules for target src/util_lib/CMakeFiles/util_lib.dir
+
+# All Build rule for target.
+src/util_lib/CMakeFiles/util_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/util_lib/CMakeFiles/util_lib.dir/build.make src/util_lib/CMakeFiles/util_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/util_lib/CMakeFiles/util_lib.dir/build.make src/util_lib/CMakeFiles/util_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=5,6 "Built target util_lib"
+.PHONY : src/util_lib/CMakeFiles/util_lib.dir/all
+
+# Build rule for subdir invocation for target.
+src/util_lib/CMakeFiles/util_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/util_lib/CMakeFiles/util_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 0
+.PHONY : src/util_lib/CMakeFiles/util_lib.dir/rule
+
+# Convenience name for target.
+util_lib: src/util_lib/CMakeFiles/util_lib.dir/rule
+.PHONY : util_lib
+
+# clean rule for target.
+src/util_lib/CMakeFiles/util_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/util_lib/CMakeFiles/util_lib.dir/build.make src/util_lib/CMakeFiles/util_lib.dir/clean
+.PHONY : src/util_lib/CMakeFiles/util_lib.dir/clean
 
 #=============================================================================
 # Target rules for target app/CMakeFiles/mainapp.dir
 
 # All Build rule for target.
-app/CMakeFiles/mainapp.dir/all: src/CMakeFiles/math_lib.dir/all
+app/CMakeFiles/mainapp.dir/all: src/math_lib/CMakeFiles/math_lib.dir/all
+app/CMakeFiles/mainapp.dir/all: src/util_lib/CMakeFiles/util_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/depend
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/mainapp.dir/build.make app/CMakeFiles/mainapp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=1,2 "Built target mainapp"
@@ -163,7 +208,7 @@ app/CMakeFiles/mainapp.dir/all: src/CMakeFiles/math_lib.dir/all
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/mainapp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/mainapp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c_tutorials/cmake/build/CMakeFiles 0
 .PHONY : app/CMakeFiles/mainapp.dir/rule

@@ -1,1 +1,1 @@
-/usr/bin/cc CMakeFiles/mainapp.dir/main.c.o -o mainapp  ../src/libmath_lib.a 
+/usr/bin/cc CMakeFiles/mainapp.dir/main.c.o -o mainapp  ../src/math_lib/libmath_lib.a ../src/util_lib/libutil_lib.a 

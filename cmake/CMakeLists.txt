@@ -11,7 +11,9 @@ project(
 
 set(LIBRARY_NAME "math_lib")
 set(EXECUTABLE_NAME "mainapp")
-set(SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/math_lib.c )
+set(SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/math_lib/math_lib.c )
+set(UTIL_LIB "util_lib")
+set(UTIL_SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/util_lib/utils.c)
 
 
 set(CMAKE_C_STANDARD 17)
@@ -32,7 +34,8 @@ message(STATUS "value of project dir:  ${PROJECT_SOURCE_DIR}")
 message(STATUS "===========================")
 
 add_subdirectory(config)
-add_subdirectory(src)
+add_subdirectory(src/math_lib)
+add_subdirectory(src/util_lib)
 
 if(COMPILE_EXECUTABLE)
     add_subdirectory(app)

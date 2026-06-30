@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "math_lib.h"
 #include "config.h"
+#include "utils.h"
 
 
 int main(){
@@ -15,6 +16,8 @@ int main(){
     printf("Project Version (Major): %d\n", PROJECT_VERSION_MAJOR);
     printf("Project Version (Minor): %d\n", PROJECT_VERSION_MINOR);
     printf("Project Version (Patch): %d\n", PROJECT_VERSION_PATCH);
+
+    prinfResult(result);
 
     return 0;
 }

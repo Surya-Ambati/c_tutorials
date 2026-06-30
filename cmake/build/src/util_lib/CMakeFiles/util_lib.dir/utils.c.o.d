@@ -1,6 +1,6 @@
-app/CMakeFiles/mainapp.dir/main.c.o: \
- /workspaces/c_tutorials/cmake/app/main.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
+src/util_lib/CMakeFiles/util_lib.dir/utils.c.o: \
+ /workspaces/c_tutorials/cmake/src/util_lib/utils.c \
+ /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -23,6 +23,4 @@ app/CMakeFiles/mainapp.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /workspaces/c_tutorials/cmake/include/math_lib.h \
- /workspaces/c_tutorials/cmake/build/config/include/config.h \
  /workspaces/c_tutorials/cmake/include/utils.h

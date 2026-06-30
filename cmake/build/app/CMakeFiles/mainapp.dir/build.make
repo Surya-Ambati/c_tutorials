@@ -92,7 +92,8 @@ mainapp_EXTERNAL_OBJECTS =
 
 app/mainapp: app/CMakeFiles/mainapp.dir/main.c.o
 app/mainapp: app/CMakeFiles/mainapp.dir/build.make
-app/mainapp: src/libmath_lib.a
+app/mainapp: src/math_lib/libmath_lib.a
+app/mainapp: src/util_lib/libutil_lib.a
 app/mainapp: app/CMakeFiles/mainapp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/c_tutorials/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable mainapp"
 	cd /workspaces/c_tutorials/cmake/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mainapp.dir/link.txt --verbose=$(VERBOSE)
